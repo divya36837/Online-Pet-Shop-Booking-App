@@ -22,6 +22,6 @@ public class PetDisplay {
 	public String toString() {
 		return "PetDisplay [petName=" + petName + ", petPrice=" + petPrice + "]";
 	}
-	
+
 
 }

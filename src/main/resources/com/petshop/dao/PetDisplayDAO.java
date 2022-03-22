@@ -19,37 +19,34 @@ public class PetDisplayDAO {
 		int rows = statement .executeUpdate(sql);
 		connection. close();
 		return rows;
-		
+
 	}
-	
+
 	public void petAdd(PetDisplay pd) throws SQLException {
-		
+
 		String sql="INSERT INTO PetDisplay (pet_name,pet_price)VALUES('"+pd.getPetName()+"',"+pd.getPetPrice()+")";
 		int rows=resultQuery(sql);
 		System.out.println("no.of rows inserted"+rows);
 	}
-	
+
 	public void petUpdate(PetDisplay pd) throws SQLException {
-		
+
 		String sql="UPDATE PetDisplay SET pet_price='"+pd.getPetPrice()+"'WHERE pet_name='"+pd.getPetName()+"'";
 		int rows=resultQuery(sql);
 		System.out.println("no.of rows update"+rows);
 	}
 	public void petDelete(PetDisplay pd) throws SQLException {
-		
+
 		String sql="DELETE FROM PetDisplay WHERE pet_name='"+pd.getPetName()+"'";
 		int rows=resultQuery(sql);
 		System.out.println("no.of rows delete"+rows);
-		
 
-		
-		
 
-	
 
-		
+
+
+
+
+
 	}
-	
 }
-
-	
